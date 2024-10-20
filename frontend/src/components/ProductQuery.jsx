@@ -10,7 +10,13 @@ function ProductQuery({ product: initialProduct }) {
 
   useEffect(() => {
     if (initialProduct) {
+      if (initialProduct.image) {
+        validateBase64Image(initialProduct.image);
+      } else {
+        setImageError(true);
+      }
       setProduct(initialProduct);
+      
     }
   }, [initialProduct]);
   
@@ -21,11 +27,14 @@ function ProductQuery({ product: initialProduct }) {
       setProduct(response.data);
       if (response.data.image) {
         validateBase64Image(response.data.image);
+      } else {
+        setImageError(true);
       }
+
     } catch (error) {
       
       console.error('Error querying product:', error);
-      alert('Product not found');
+      alert('Tuotetta ei löytynyt');
       setProduct(null);
     }
   };
