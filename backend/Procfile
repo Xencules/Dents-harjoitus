@@ -1,1 +1,1 @@
-echo "web: java -Dserver.port=\$PORT -jar target/your-spring-boot-app.jar" > Procfile
+web: java -Dserver.port=$PORT -jar target/your-spring-boot-app.jar
