@@ -1,1 +1,1 @@
-web: cd frontend && npm install && npm run build && cd ../backend && java -Dserver.port=$PORT -jar target/dents.jar
+web: cd frontend && npm install && npm run build && cd ../backend && ./mvnw clean install && java -Dserver.port=$PORT -jar target/dents.jar
