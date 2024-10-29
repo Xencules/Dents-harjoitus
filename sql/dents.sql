@@ -19,7 +19,8 @@
 SET GLOBAL local_infile = 1;
 
 
-USE `dents_database`;
+CREATE SCHEMA IF NOT EXISTS dentdb;
+USE dentdb;
 --
 -- Table structure for table `product`
 --

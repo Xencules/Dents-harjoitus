@@ -32,7 +32,10 @@ Open MySQL Workbench and connect to your MySQL server.
 Check secure_file_priv Variable: This variable restricts the directories from which files can be loaded. You need to ensure that the directory containing your files is allowed. The files are located in /frontend/src/assets-folder.
 You will need to change the folder settings in the sql-script file to match the location where your secure_file_priv variable has set as a "allowed" folder.
 Test LOAD_FILE Function: Run a simple query to test if the LOAD_FILE function can read a file from the specified directory
-Run the SQL script located at sql/dents.sql to set up the database.
+
+Run the SQL script located at sql/dents.sql (for example in MySQL Workbench) to set up the database.
+
+Database connection info:
 url=jdbc:mysql://localhost:3306/dents_database
 username=dentstask
 password=2024
