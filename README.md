@@ -36,8 +36,11 @@ Test LOAD_FILE Function: Run a simple query to test if the LOAD_FILE function ca
 Run the SQL script located at sql/dents.sql (for example in MySQL Workbench) to set up the database.
 
 Database connection info:
+
 url=jdbc:mysql://localhost:3306/dents_database
+
 username=dentstask
+
 password=2024
 
 # Running the Project
